@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Donimo's</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	</head>
+	<body>
+		<nav class="navbar">
+			<div style="width: 100%">
+				<a href="index.html" class="home-link">
+					<img
+						src="{{ url_for('static', filename='images/home.svg') }}"
+						alt=""
+						width="64px"
+						style="filter: invert(1)"
+					>
+				</a>
+			</div>
+		</nav>
+		<div class="main">
+			<!-- Left Hand Side -->
+			<div class="screen-lhs">
+				<h1>Pizzas Available</h1>
+				<p id="divider"></p>
+				<div
+					style="width: 90%; border-style: solid; border-color: black; border-width: 2px"
+				>
+					<div class="spacer"></div>
+				</div>
+			</div>
+			<!-- Right Hand Side -->
+			<div class="screen-rhs">
+				<h1>Order Summary</h1>
+				<p id="divider"></p>
+				<div
+					style="width: 90%; border-style: solid; border-color: black; border-width: 2px"
+				>
+					<div class="spacer"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

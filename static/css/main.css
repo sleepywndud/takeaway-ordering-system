@@ -1,0 +1,58 @@
+@font-face {
+	font-family: WorkSans;
+	src: url(../fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format('woff2');
+}
+
+:root {
+	--red-darker: #4a1724;
+	--red-dark: #641d2e;
+	--red-accent: #b23f46;
+	--orange-mid: #e84915;
+	--orange-accent: #ff642b;
+
+	/* Fallback fonts */
+	--fallback_fonts: arial, sans-serif, serif;
+}
+
+body {
+	font-family: WorkSans, var(--fallback_fonts);
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	background-color: var(--red-dark);
+	display: flex;
+	align-items: center;
+	padding: 0.5rem;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.screen-lhs {
+	margin: 2rem;
+	grid-area: 1 / 1 / 2 / 2;
+}
+
+.screen-rhs {
+	margin: 2rem;
+	grid-area: 1 / 2 / 2 / 3;
+}
+
+#divider {
+	width: 270px;
+	height: 7px;
+	border-radius: 10px;
+	background: var(--red-accent);
+	margin-top: -15px;
+}
+
+.spacer {
+	margin: 64px;
+}
