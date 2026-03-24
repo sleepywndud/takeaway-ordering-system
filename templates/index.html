@@ -8,25 +8,34 @@
 	</head>
 	<body>
 		<nav class="navbar">
-			<div style="width: 100%">
-				<a href="index.html" class="home-link">
-					<img
-						src="{{ url_for('static', filename='images/home.svg') }}"
-						alt=""
-						width="64px"
-						style="filter: invert(1)"
-					>
-				</a>
-			</div>
+			<a href="/">
+				<img
+					src="{{ url_for('static', filename='images/home.svg') }}"
+					alt=""
+					width="64px"
+					style="filter: invert(1)"
+				>
+			</a>
+			<a href="">SNACKS</a>
+			<a href="">DRINKS</a>
+			<a href="">DESSERTS</a>
+			<a href="">CUSTOMIZE YOUR PIZZA</a>
 		</nav>
 		<div class="main">
 			<!-- Left Hand Side -->
 			<div class="screen-lhs">
-				<h1>Pizzas Available</h1>
-				<p id="divider"></p>
-				<div
-					style="width: 90%; border-style: solid; border-color: black; border-width: 2px"
-				>
+				<div>
+					<h1>Featured</h1>
+					<p id="divider"></p>
+					<div class="spacer"></div>
+					{% for pizza in pizzas %}
+						<p>{{ pizza[1] }}</p>
+					{% endfor %}
+					<!--  -->
+				</div>
+				<div>
+					<h1>Sharing Meal Deals</h1>
+					<p id="divider"></p>
 					<div class="spacer"></div>
 				</div>
 			</div>
@@ -34,11 +43,11 @@
 			<div class="screen-rhs">
 				<h1>Order Summary</h1>
 				<p id="divider"></p>
-				<div
-					style="width: 90%; border-style: solid; border-color: black; border-width: 2px"
-				>
-					<div class="spacer"></div>
-				</div>
+				<div class="spacer"></div>
+				<h2>Add a Voucher Code</h2>
+				<div class="spacer"></div>
+				<h2>Order Details</h2>
+				<div class="spacer"></div>
 			</div>
 		</div>
 	</body>
