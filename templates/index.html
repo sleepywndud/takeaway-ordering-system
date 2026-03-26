@@ -29,8 +29,18 @@
 					<p id="divider"></p>
 					<div class="spacer"></div>
 
-					{% for pizza in pizzas %}
+					<!-- pizza[1] returns column 1 (pizza name) -->
+					{% for pizza in data %}
 					<p>{{ pizza[1] }}</p>
+					{% endfor %}
+
+					<!-- pizza[2] returns column 2 (pizza image) -->
+					{% for pizza in data %}
+					<img
+						src="{{ url_for('static', filename='images/' + pizza[2]) }}"
+						alt=""
+						width="100px"
+					>
 					{% endfor %}
 
 					<div class="spacer"></div>

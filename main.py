@@ -13,12 +13,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    conn = sqlite3.connect("database.db")
-    cr = conn.cursor()
+    conn = sqlite3.connect("database.db")  # connect
+    cr = conn.cursor()  # cursur setting
     cr.execute("SELECT * FROM pizza")
-    pizzas = cr.fetchall()
+    data = cr.fetchall()
     conn.close()
-    return render_template("index.html", pizzas=pizzas)
+    return render_template("index.html", data=data)
 
 
 if __name__ == "__main__":
