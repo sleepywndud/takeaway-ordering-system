@@ -57,7 +57,13 @@
 				<h1>Order Summary</h1>
 				<p id="divider"></p>
 				<div class="spacer"></div>
+
 				<h2>Add a Voucher Code</h2>
+				<p>{{ voucher_status }}</p>
+				<form method="POST">
+					<button type="submit">{{ voucher_button_status }}</button>
+				</form>
+
 				<div class="spacer"></div>
 				<h2>Order Details</h2>
 				<div class="spacer"></div>
