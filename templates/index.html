@@ -29,6 +29,7 @@
 					<p id="divider"></p>
 					<div class="spacer"></div>
 
+					<h2>Test Images</h2>
 					<!-- pizza[1] returns column 1 (pizza name) -->
 					{% for pizza in data %}
 					<p>{{ pizza[1] }}</p>
@@ -61,7 +62,8 @@
 				<h2>Add a Voucher Code</h2>
 				<p>{{ voucher_status }}</p>
 				<form method="POST">
-					<button type="submit">{{ voucher_button_status }}</button>
+					<input type="text" placeholder="Type Voucher Code Here">
+					<button type="submit">Apply Voucher</button>
 				</form>
 
 				<div class="spacer"></div>

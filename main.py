@@ -9,21 +9,24 @@ Project Started on 19.03.2026
 from imports import *
 
 app = Flask(__name__)
-voucher_status = "Not Applied"
+voucher_status = "Voucher Not Applied"
+voucher_button_status = "Apply Voucher"
 
 
 @app.route("/", methods=["GET", "POST"])
 def main():
-    global voucher_status
+    global voucher_status, voucher_button_status
     conn = sqlite3.connect("database.db")  # connect
     cr = conn.cursor()  # cursor setting
 
     cr.execute("SELECT * FROM pizza")
     data = cr.fetchall()
 
+    #  -------------------------------------------------------------
+
     if request.method == "POST":
         if voucher_status == "Voucher Applied":
-            voucher_status = "Not Applied"
+            voucher_status = "Voucher Not Applied"
             voucher_button_status = "Apply Voucher"
         else:
             voucher_status = "Voucher Applied"
