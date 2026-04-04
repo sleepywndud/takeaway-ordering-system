@@ -25,6 +25,9 @@ def main():
     #  -------------------------------------------------------------
 
     if request.method == "POST":
+        voucher_code = request.form.get("voucher_code")
+        print(f"Voucher Code received: {voucher_code}")
+
         if voucher_status == "Voucher Applied":
             voucher_status = "Voucher Not Applied"
             voucher_button_status = "Apply Voucher"
